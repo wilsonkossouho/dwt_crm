@@ -10,7 +10,8 @@ class CrmLead(models.Model):
     garantie_soumission = fields.Integer(string='Garantie de soumission (FCFA)')
     duree_validite = fields.Integer(string='Durée de validité (Jours)')
     capacite_financiere = fields.Integer(string='Capacité financière (FCFA)')
-    groupement = fields.Integer(string='Groupement')
+
+    groupement = fields.Many2many('res.partner',string='Groupement')
     autorisation_fabricant = fields.Selection([('oui', 'Oui'), ('non', 'Non')],string='Autorisation de fabricant')
     source_financement = fields.Selection(
         [

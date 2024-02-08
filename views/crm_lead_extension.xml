@@ -21,7 +21,7 @@
                             <field name="lot"/>
                             <field name="source_financement"/>
                             <field name="capacite_financiere"/>
-                            <field name="groupement"/>
+                            <field name="groupement" widget="many2many_tags"/>
                             <field name="date_notification"/>
                         </group>
                    </group>
